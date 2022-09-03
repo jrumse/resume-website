@@ -1,3 +1,6 @@
+# resume-website
+A web application that displays my personal resume with modern software development trends.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
