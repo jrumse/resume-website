@@ -8,7 +8,7 @@
       "customTemplates": {
         "component": "src/templates/component/TemplateName.js"
       },
-      "path": "src/pages",
+      "path": "src/components",
       "withStyle": true,
       "withTest": true,
       "withStory": true,

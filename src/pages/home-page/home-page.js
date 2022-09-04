@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React , { Component } from 'react';
 import './home-page.css';
 
 class HomePage extends Component {
