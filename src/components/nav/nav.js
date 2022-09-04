@@ -12,12 +12,13 @@ class Nav extends Component {
   
     render() {
       return (
-        <div>
-          <div className={styles.Nav} data-testid="Nav">Nav Component</div>
-					<Link to="/">Home</Link>
-					<Link to="education">Education</Link>
-					<Link to="experience">Work Experience</Link>
-					<Link to="contact">Contact</Link>
+        <div className="navContent">
+          <div className="title"><Link to="/" className="link">josh_rumsey_sde</Link></div>
+          <div className="navLinks">
+            <Link to="education" className="link">Education</Link>
+            <Link to="experience" className="link">Work Experience</Link>
+            <Link to="contact" className="link">Contact</Link>
+          </div>
         </div>
       );
     }

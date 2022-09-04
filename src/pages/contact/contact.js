@@ -11,7 +11,7 @@ class Contact extends Component {
   
     render() {
       return (
-        <div className={styles.Contact} data-testid="Contact">Contact Component</div>
+        <div className="contact" data-testid="Contact">Contact Component</div>
       );
     }
 }

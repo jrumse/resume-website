@@ -3,3 +3,26 @@
 a {
     margin-right: 1%;
 }
+
+.navContent {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 4vh;
+}
+
+.title {
+    font-size: 36px;
+}
+
+.navLinks {
+    width: 25vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+}

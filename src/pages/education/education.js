@@ -11,7 +11,7 @@ class Education extends Component {
   
     render() {
       return (
-        <div className={styles.Education} data-testid="Education">Education Component</div>
+        <div className="education" data-testid="Education">Education Component</div>
       );
     }
 }

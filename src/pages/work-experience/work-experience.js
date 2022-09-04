@@ -11,7 +11,7 @@ class WorkExperience extends Component {
   
     render() {
       return (
-        <div className={styles.WorkExperience} data-testid="WorkExperience">WorkExperience Component</div>
+        <div className="work-experience" data-testid="WorkExperience">WorkExperience Component</div>
       );
     }
 }
