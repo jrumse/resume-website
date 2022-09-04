@@ -1,4 +1,5 @@
 import React , { Component } from 'react';
+import Post from '../../components/post/post';
 import './home-page.css';
 
 class HomePage extends Component {
@@ -12,7 +13,8 @@ class HomePage extends Component {
   render() {
     return (
       <div className="home-page">
-        <div className="welcome">Welcome.</div>
+        <div className="welcomeText">Welcome.</div>
+        <Post />
       </div>
     );
   }

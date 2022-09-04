@@ -1,8 +1,15 @@
 .home-page {
+    /* padding-bottom: 30%; */
+    margin-top: 16%;
+    scroll-behavior: smooth;
 }
 
-.welcome {
+.welcomeText {
     font-size: 50px;
-    margin-top: 15%;
-    padding-bottom: 70%;
+    padding-bottom: 30%;
+    text-align: center;
+}
+
+.berg {
+    text-align: center;
 }

@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-import styles from './work-experience.css';
+import './work-experience.css';
 
 class WorkExperience extends Component {
 

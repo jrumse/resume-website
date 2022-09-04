@@ -1,0 +1,20 @@
+.Post {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 14%;
+}
+
+.text {
+    width: 35%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.photo {
+    width: 18vw;
+    border-radius: 1em;
+}
+
+.paragraph {
+    font-size: 20px;
+}

@@ -3,11 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+// Set up theme for MUI
+let theme = createTheme({
+  palette: {
+    primary: {
+      main: '#FFFFFF',
+    },
+  },
+  typography: {
+    fontFamily: [
+      'Roboto Mono',
+      'monospace'
+    ].join(",")
+  }
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

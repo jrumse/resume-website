@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Nav from './components/nav/nav'
 import HomePage from './pages/home-page/home-page';
 import Education from './pages/education/education'
