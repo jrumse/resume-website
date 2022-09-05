@@ -10,8 +10,18 @@
 }
 
 .photo {
-    width: 18vw;
     border-radius: 1em;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 18vw;
+    transition: transform .5s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+    z-index: initial;
 }
 
 .paragraph {

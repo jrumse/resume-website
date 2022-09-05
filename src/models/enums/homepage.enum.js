@@ -2,7 +2,7 @@ export const uiParams = {
     header: 'UI',
     message: 'I am experienced in writing UI applications in JavaScript, ' +
     'TypeScript, JQuery, React, Angular, Vue, and Python Jinja2 templating. ' + 
-    'I have also used component libraries in React and Angular such as Material UI and Next.js.' 
+    'I frequently use component libraries in React and Angular such as Material UI and Next.js.' 
 }
   
 export const apiParams = {

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import "animate.css/animate.min.css";
 
 // Set up theme for MUI
 let theme = createTheme({
