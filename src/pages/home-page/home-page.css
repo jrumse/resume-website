@@ -1,15 +1,59 @@
+/* Page */
 .home-page {
     /* padding-bottom: 30%; */
     margin-top: 16%;
     scroll-behavior: smooth;
 }
 
+/* Welcome Text */
 .welcomeText {
     font-size: 50px;
     padding-bottom: 30%;
     text-align: center;
+    animation: fadeIn 5s; 
 }
 
-.berg {
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/*  About Me */
+.aboutMe {
+    margin-bottom: 15%;
+}
+
+/* Programming Languages */
+.programmingLanguages {
+    margin-top: 5%;
+    margin-bottom: 11%;
+}
+
+.plPosts {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.plHeader {
     text-align: center;
+    margin-bottom: 4%;
+}
+
+.logos {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    width: 80%;
+}
+
+.sLogo {
+    width: 10%;
+    height: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
 }

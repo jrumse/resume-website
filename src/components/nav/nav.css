@@ -5,10 +5,16 @@ a {
 }
 
 .navContent {
+    backdrop-filter: blur(20px) !important;
     display: flex;
     justify-content: space-around;
+    /* Sticky Navbar */
     position: sticky;
-    top: 4vh;
+    top: 0;
+    /* Navbar blur dimensions */
+    padding-top: 4vh;
+    padding-bottom: 1vh;
+    width: 100%;
 }
 
 .title {
