@@ -1,5 +1,6 @@
 import React , { Component } from 'react';
-import { uiParams, apiParams, dbParams } from '../../models/enums/homepage.enum'
+import { uiParams, apiParams, dbParams, aboutMeParams } from '../../models/enums/homepage.enum'
+import Headshot from '../../assets/images/professionalpic.jpg'
 import Post from '../../components/post/post';
 import SmallPost from '../../components/small-post/small-post';
 import reactLogo from '../../assets/images/reactLogo.png'
@@ -25,7 +26,7 @@ class HomePage extends Component {
         {/* Stage one of the about page */}
         <div className="welcomeText">Welcome.</div>
         <div className='aboutMe'>
-          <Post />
+          <Post params={aboutMeParams} photo={Headshot} />
         </div>
 
         {/* Stage two of the about page */}
