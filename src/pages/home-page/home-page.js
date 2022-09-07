@@ -12,6 +12,7 @@ import pyLogo from '../../assets/images/pyLogo.png'
 import javaLogo from '../../assets/images/javaLogo.png'
 import mongodbLogo from '../../assets/images/mongodbLogo.png'
 import './home-page.css';
+import Footer from '../../components/footer/footer';
 
 class HomePage extends Component {
 
@@ -33,23 +34,26 @@ class HomePage extends Component {
         </div>
 
         {/* Stage two of the about page */}
-        <div className="programmingLanguages">
-          <h1 className='plHeader'>Programming Languages</h1>
-          <div className="plPosts">
-            <SmallPost params={uiParams} />
-            <SmallPost params={apiParams} />
-            <SmallPost params={dbParams} />
+        <AnimationOnScroll animateIn="animate__fadeInRightBig" duration="2">
+          <div className="programmingLanguages">
+            <h1 className='plHeader'>Programming Languages</h1>
+            <div className="plPosts">
+              <SmallPost params={uiParams} />
+              <SmallPost params={apiParams} />
+              <SmallPost params={dbParams} />
+            </div>
+            <div className='logos'>
+              <img className='sLogo' src={reactLogo} alt="reactLogo" />
+              <img className='sLogo' src={angularLogo} alt="angularLogo" />
+              <img className='sLogo' src={vueLogo} alt="vueLogo" />
+              <img className='sLogo' src={goLogo} alt="goLogo" />
+              <img className='sLogo' src={pyLogo} alt="pyLogo" />
+              <img className='sLogo' src={javaLogo} alt="javaLogo" />
+              <img className='sLogo' src={mongodbLogo} alt="mongodbLogo" />
+            </div>
           </div>
-          <div className='logos'>
-            <img className='sLogo' src={reactLogo} alt="reactLogo" />
-            <img className='sLogo' src={angularLogo} alt="angularLogo" />
-            <img className='sLogo' src={vueLogo} alt="vueLogo" />
-            <img className='sLogo' src={goLogo} alt="goLogo" />
-            <img className='sLogo' src={pyLogo} alt="pyLogo" />
-            <img className='sLogo' src={javaLogo} alt="javaLogo" />
-            <img className='sLogo' src={mongodbLogo} alt="mongodbLogo" />
-          </div>
-        </div>
+        </AnimationOnScroll>
+        <Footer />
       </div>
     );
   }

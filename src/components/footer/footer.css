@@ -1,0 +1,24 @@
+.Footer {
+    width: 100%;
+    height: 75vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #040c21;
+}
+
+.divider {
+    background-color: white;
+}
+
+.hTitle {
+    font-size: 36px;
+    margin-top: 6vh;
+    margin-left: 15.5vw;
+}
+
+.hContent {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+

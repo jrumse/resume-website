@@ -26,7 +26,7 @@
 /* Programming Languages */
 .programmingLanguages {
     margin-top: 5%;
-    margin-bottom: 11%;
+    margin-bottom: 15%;
 }
 
 .plPosts {
@@ -56,4 +56,9 @@
     height: 10%;
     margin-top: auto;
     margin-bottom: auto;
+    transition: transform 250ms;
+}
+
+.sLogo:hover {
+    transform: translateY(-20px);
 }
