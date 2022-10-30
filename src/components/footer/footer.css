@@ -22,3 +22,37 @@
     margin-top: 5%;
 }
 
+.footerLinks {
+    margin-left: 1vw;
+}
+
+.footerLink {
+    text-decoration: none;
+    margin: 0.5em !important;
+    color: white;
+}
+
+.textWithLogo {
+    display: flex;
+    margin-bottom: 0.5em;
+}
+
+.linkText {
+    margin-right: 0.5vw;
+}
+
+.linkLogo {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 26px;
+    width: 26px;
+}
+
+.footerLink :hover {
+    text-decoration: underline;
+}
+
+.footerLink :active {
+    color: purple;
+    text-decoration: underline;
+}
