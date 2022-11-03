@@ -22,10 +22,8 @@ class App extends Component {
 
   // Allows ability to update tab from nav or footer
   handleNavChange(e, newActiveTab) {
-    console.log(newActiveTab);
     this.setState({tabValue: newActiveTab})
     localStorage.setItem('activeTab', Number(newActiveTab))
-    console.log(localStorage.getItem('activeTab'))
   }
 
   render() {
