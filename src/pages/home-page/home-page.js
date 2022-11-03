@@ -28,13 +28,13 @@ class HomePage extends Component {
         {/* Stage one of the about page */}
         <div className="welcomeText">Welcome.</div>
         <div className='aboutMe'>
-          <AnimationOnScroll animateIn="animate__fadeIn" duration="2" animateOnce="true">
+          <AnimationOnScroll animateIn="animate__fadeIn" duration="2" >
             <Post params={aboutMeParams} photo={Headshot} />
           </AnimationOnScroll>
         </div>
 
         {/* Stage two of the about page */}
-        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" animateOnce="true">
+        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" >
           <div className="programmingLanguages">
             <h1 className='plHeader'>Programming Languages</h1>
             <div className="plPosts">

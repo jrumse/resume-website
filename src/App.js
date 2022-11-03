@@ -22,8 +22,12 @@ class App extends Component {
 
   // Allows ability to update tab from nav or footer
   handleNavChange(e, newActiveTab) {
+    // Set the new active tab
     this.setState({tabValue: newActiveTab})
-    localStorage.setItem('activeTab', Number(newActiveTab))
+    // Track active tab in browser storage to preserve on reload
+    localStorage.setItem('activeTab', Number(newActiveTab));
+    // Scroll to top of page after a new tab selection
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   }
 
   render() {
