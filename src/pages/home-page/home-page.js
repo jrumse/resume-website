@@ -12,7 +12,6 @@ import pyLogo from '../../assets/images/pyLogo.png'
 import javaLogo from '../../assets/images/javaLogo.png'
 import mongodbLogo from '../../assets/images/mongodbLogo.png'
 import './home-page.css';
-import Footer from '../../components/footer/footer';
 
 class HomePage extends Component {
 
@@ -48,8 +47,8 @@ class HomePage extends Component {
               <img className='sLogo' src={vueLogo} alt="vueLogo" />
               <img className='sLogo' src={goLogo} alt="goLogo" />
               <img className='sLogo' src={pyLogo} alt="pyLogo" />
-              <img className='sLogo' src={javaLogo} alt="javaLogo" />
               <img className='sLogo' src={mongodbLogo} alt="mongodbLogo" />
+              <img className='sLogo' src={javaLogo} alt="javaLogo" />
             </div>
           </div>
         </AnimationOnScroll>

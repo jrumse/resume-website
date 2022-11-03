@@ -1,3 +1,18 @@
 .education {
     height: 100vh;
+    margin-top: 15%;
+}
+
+.educationHookText {
+    font-size: 40px;
+    text-align: center; 
+}
+
+.One {
+    
+    animation: fadeIn 2s;
+}
+
+.Two {
+    animation: fadeIn 4s;
 }

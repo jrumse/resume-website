@@ -49,19 +49,19 @@ class Footer extends Component {
                 <a href="https://github.com/jrumse" target="_blank" rel="noreferrer noopener" className="footerLink" >
                   <div className="textWithLogo">
                     <h3 className="linkText">GitHub</h3>
-                    <img src={githubLogo} className="linkLogo" />
+                    <img src={githubLogo} alt="githubLogo" className="linkLogo" />
                   </div>
                 </a>
                 <a href="https://www.linkedin.com/in/joshrumsey" target="_blank" rel="noreferrer noopener" className="footerLink" >
                   <div className="textWithLogo">
                     <h3 className="linkText">LinkedIn</h3>
-                    <img src={linkedInLogo} className="linkLogo" />
+                    <img src={linkedInLogo} alt="linkedInLogo" className="linkLogo" />
                   </div>
                 </a>
                 <a href={resume} download="joshRumseyResume" className="footerLink" >
                   <div className="textWithLogo" >
                     <h3 className="linkText" >Resume</h3>
-                    <img src={documentLogo} className="linkLogo" />
+                    <img src={documentLogo} alt="downloadResumeLogo" className="linkLogo" />
                   </div>
                 </a>
               </div>
@@ -72,7 +72,7 @@ class Footer extends Component {
                 <a href="https://reactjs.org/" target="_blank" rel="noreferrer noopener" className="footerLink" >
                   <div className="textWithLogo" >
                     <h3 className="linkText">React</h3>
-                    <img src={reactWhiteLogo} className="linkLogo" />
+                    <img src={reactWhiteLogo} alt="reactWhiteLogo" className="linkLogo" />
                   </div>
                 </a>
               </div>
