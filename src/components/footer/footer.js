@@ -29,16 +29,16 @@ class Footer extends Component {
               <h2>Overview</h2>
               <div className="footerLinks">
                 <Link to="/" className="footerLink" >
-                  <h3>About</h3>
+                  <h3 onClick={() => this.props.handleNavChange(null, 0)}>About</h3>
                 </Link>
                 <Link to="education" className="footerLink" >
-                  <h3>Education</h3>
+                  <h3 onClick={() => this.props.handleNavChange(null, 1)}>Education</h3>
                 </Link>
                 <Link to="experience" className="footerLink" >
-                  <h3>Work Experience</h3>
+                  <h3 onClick={() => this.props.handleNavChange(null, 2)}>Work Experience</h3>
                 </Link>
                 <Link to="contact" className="footerLink" >
-                  <h3>Contact</h3>
+                  <h3 onClick={() => this.props.handleNavChange(null, 3)}>Contact</h3>
                 </Link>
               </div>
             </div>

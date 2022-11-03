@@ -9,22 +9,16 @@ class Nav extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        tabValue: 0,
         navTitleText: 'josh_rumsey_sde'
       }
       // Add function binding here
-      this.handleNavChange = this.handleNavChange.bind(this);
       this.resetNav = this.resetNav.bind(this);
       this.onMouseover = this.onMouseover.bind(this);
       this.onMouseout = this.onMouseout.bind(this);
     }
 
-    handleNavChange(e, newActiveTab) {
-      this.setState({tabValue: newActiveTab})
-    }
-
     resetNav() {
-      this.setState({tabValue: 0})
+      this.props.handleNavChange(null, 0)
     }
 
     //set the text
@@ -46,7 +40,7 @@ class Nav extends Component {
           onMouseEnter={this.onMouseover.bind(this)}
           onMouseLeave={this.onMouseout.bind(this)}>{this.state.navTitleText}</Link></div>
           <div className="navLinks">
-            <Tabs value={this.state.tabValue} onChange={this.handleNavChange}>
+            <Tabs value={this.props.tabValue} onChange={this.props.handleNavChange}>
               <Tab label="About" component={Link} to="/" className="link" />
               <Tab label="Education" component={Link} to="education" className="link" />
               <Tab label="Work Experience" component={Link} to="experience" className="link" />
