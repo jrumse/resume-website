@@ -17,7 +17,7 @@ class Post extends Component {
             <p className="paragraph">{this.props.params.message}</p>
           </div>
           <div className="photo">
-            <img src={this.props.photo} alt="headshot" />
+            <img src={this.props.photo} alt="post-photo" />
           </div>
         </div>
       );

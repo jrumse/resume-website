@@ -1,5 +1,4 @@
 .education {
-    height: 100vh;
     margin-top: 15%;
 }
 
@@ -15,4 +14,12 @@
 
 .Two {
     animation: fadeIn 4s;
+}
+
+.educationHook {
+    margin-bottom: 30%;
+}
+
+.bachelorsPost {
+    margin-bottom: 30%;
 }
