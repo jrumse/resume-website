@@ -4,6 +4,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: #040c21;
+    margin-top: 15%;
 }
 
 .divider {
@@ -13,7 +14,12 @@
 .hTitle {
     font-size: 36px;
     margin-top: 6vh;
-    margin-left: 15.5vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerTitleSpacing {
+    width: 483px;
 }
 
 .hContent {

@@ -12,6 +12,8 @@
 .photo {
     border-radius: 1em;
     overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .photo img {

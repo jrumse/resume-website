@@ -21,7 +21,10 @@ class Footer extends Component {
         <div className="Footer" data-testid="Footer">
           <Divider className="divider" />
           <div className="hTitle">
-            josh_rumsey_sde
+            <div>
+              josh_rumsey_sde
+            </div>
+            <div className="footerTitleSpacing" />
           </div>
           <div className="hContent">
             <div>

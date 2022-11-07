@@ -14,12 +14,9 @@
 
 .Two {
     animation: fadeIn 4s;
+    padding-bottom: 10%;
 }
 
-.educationHook {
-    margin-bottom: 30%;
-}
-
-.bachelorsPost {
-    margin-bottom: 30%;
+.eduPosts {
+    margin-top: 20%;
 }
