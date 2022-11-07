@@ -20,3 +20,18 @@
 .eduPosts {
     margin-top: 20%;
 }
+
+.eecsLogoPng {
+    width: 600px;
+    transition: transform 250ms;
+}
+
+.eecsLogoPng:hover {
+    transform: translateY(-10px);
+}
+
+.eecsLogoLong {
+    margin-top: 3.5%;
+    display: flex;
+    justify-content: space-around;
+}

@@ -4,7 +4,8 @@ import SmallPost from '../../components/small-post/small-post';
 import { assignmentCollector, courseStudyParams, educationParams, insta485, skiLocale } from '../../models/enums/education.enum';
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import UMLogo from '../../assets/images/u-m_logo-hex.png'
-import eecsLogo from '../../assets/images/stacked-white.png'
+import eecsLogo from '../../assets/images/mcse.png'
+import eecsLogoLong from '../../assets/images/EECS-acronym-white.png'
 import './education.css';
 
 class Education extends Component {
@@ -35,15 +36,14 @@ class Education extends Component {
               <SmallPost params={assignmentCollector} />
               <SmallPost params={insta485} />
             </div>
+            <div className="eecsLogoLong">
+              <a href="https://cse.engin.umich.edu/academics/undergraduate/computer-science-lsa/" 
+              target="_blank" rel="noreferrer noopener">
+                <img className="eecsLogoPng" src={eecsLogoLong} alt="eecslogolong" />
+              </a>
+            </div>
           </AnimationOnScroll>
         </div>
-        // University of Michigan Computer Science Summary
-        // Kalamazoo Valley Community College Summary
-        // Notable College Projects
-        // 1. Ski Locale
-        // 2. Assignment Collector
-        // 3. insta485
-        // https://cse.engin.umich.edu/academics/undergraduate/computer-science-lsa/
       );
     }
 }
