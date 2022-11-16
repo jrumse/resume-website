@@ -17,6 +17,7 @@ class Education extends Component {
     }
   
     render() {
+      // Testing
       return (
         <div className="education" data-testid="Education">
           <div className="educationHook">
