@@ -1,0 +1,31 @@
+.PicDesc {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text {
+    width: 29%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.photo {
+    border-radius: 1em;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.photo img {
+    width: 18vw;
+    transition: transform .5s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+    z-index: initial;
+}
+
+.paragraph {
+    font-size: 20px;
+}

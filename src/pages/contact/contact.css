@@ -1,3 +1,10 @@
 .contact {
-    height: 100vh;
+    margin-top: 16%;
+}
+
+.contactHookText {
+    font-size: 40px;
+    text-align: center;
+    animation: fadeIn 3s;
+    padding-bottom: 10%;
 }

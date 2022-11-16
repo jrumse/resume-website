@@ -1,7 +1,6 @@
 import React , { Component } from 'react';
-import { uiParams, apiParams, dbParams, aboutMeParams } from '../../models/enums/homepage.enum'
+import { uiParams, apiParams, dbParams, aboutMePost } from '../../models/enums/homepage.enum'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
-import Headshot from '../../assets/images/professionalpic.jpg'
 import Post from '../../components/post/post';
 import SmallPost from '../../components/small-post/small-post';
 import reactLogo from '../../assets/images/reactLogo.png'
@@ -28,7 +27,7 @@ class HomePage extends Component {
         <div className="welcomeText">Welcome.</div>
         <div className='aboutMe'>
           <AnimationOnScroll animateIn="animate__fadeIn" duration="2" >
-            <Post params={aboutMeParams} photo={Headshot} />
+            <Post post={aboutMePost} />
           </AnimationOnScroll>
         </div>
 

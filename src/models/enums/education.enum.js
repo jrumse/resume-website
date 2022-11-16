@@ -1,20 +1,23 @@
+// Post Content
 export const educationParams = {
     header: 'Bachelors',
     message: 'After transferring from the honors program of my local community college with a near 4.0 GPA, ' +
     'I completed my college education at the University of Michigan. I graduated from the College of Literature, Science, and Arts ' + 
     'with a Bachelors Degree in Computer Science. Although my degree was offered through LSA, the program was administered through ' +
     'the College of Engineering, which is one of the most prestegious engineering schools in the country. ',
-    position: 'right'
+    position: 'right',
+    photo: 'u-m_logo-hex.png'
 }
 
 export const courseStudyParams = {
     header: 'Course Study',
     message: 'The emphasis of my studies were placed in building a wealth of knowledge around modern software development practices. ' +
-    'Algorithms and Data Structures, Computer Organization, and Computer Science Theory established a good background, but ' +
-    'I further enhanced my experience by taking classes such as Software Engineering, Web Systems, Databases, and User Interfaces. ' +
+    'Courses such as Algorithms and Data Structures, Computer Organization, and Computer Science Theory all established a good background, but ' +
+    'I further enhanced my experience by taking my electives: Software Engineering, Web Systems, Databases, and User Interfaces. ' +
     'I strategically chose Mobile App Development for Entrepreneurs as my capstone so that I could demonstrate all that I have learned ' +
     'throughout my time in school. ',
-    position: 'left'
+    position: 'left',
+    photo: 'mcse.png'
 }
 
 export const skiLocale = {
@@ -24,7 +27,9 @@ export const skiLocale = {
     'consisted of a single page Python Flask Server that utilized a SQL database for resort information, weather APIs for resort ' +
     'conditions, and the Google Maps API for location tracking as well as a reactive satellite map display. The development cycle for ' +
     'this project required the implementation of multiple minimum viable products built off ideas and critiques from ' +
-    'in-class biweekly progress presentations, where the professor pretended to be a stakeholder. '
+    'in-class biweekly progress presentations, where the professor pretended to be a stakeholder. ',
+    position: 'left',
+    photo: ''
 }
   
 export const assignmentCollector = {
@@ -34,7 +39,9 @@ export const assignmentCollector = {
     'TO-DO app that is intuitive and satisfying to use. The application was built with a React UI and an Express API, and also utilized ' +
     'Material UI components to enhance usability. The project allowed users to add classes and assignments, track completion status, ' +
     'track completion metrics such as estimated and actual completion time, and remove assignments once completed. The project was ' +
-    'recognized by the professor as one of the best submissions for the semester, and kept around as a model project for future students.'
+    'recognized by the professor as one of the best submissions for the semester, and kept around as a model project for future students.',
+    position: 'center',
+    photo: ''
 }
   
 export const insta485 = {
@@ -44,5 +51,23 @@ export const insta485 = {
     'full stack application that had a React UI, Python Flask API, and SQL database. The application allowed users to securely log in, ' +
     'add and remove followers, add and remove posts (including photos for each post), interact with other users posts with likes and ' +
     'comments, view user profiles, scroll through a (theoretically) endless post feed, and recommend new users to follow based on your ' + 
-    "friends' followers. The entire application was fully deployed to AWS at the end of the semester."
+    "friends' followers. The entire application was fully deployed to AWS at the end of the semester.",
+    position: 'right',
+    photo: ''
+}
+
+// Posts
+export const bachelorsPost = {
+    type: 'pic-desc',
+    content: [educationParams]
+}
+
+export const courseStudyPost = {
+    type: 'pic-desc',
+    content: [courseStudyParams]
+}
+
+export const notableProjectsPost = {
+    type: 'tri-desc',
+    content: [skiLocale, assignmentCollector, insta485]
 }

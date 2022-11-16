@@ -1,3 +1,4 @@
+// Content
 export const uiParams = {
     header: 'UI',
     message: 'I am experienced in writing UI applications in JavaScript, ' +
@@ -24,5 +25,17 @@ export const aboutMeParams = {
     'I spent two years at Kalamazoo Valley Community College pursuing an Associates in Applied Mathematics, before ' +
     'transferring to the University of Michigan in Ann Arbor to complete a Bachelors in Computer Science. I am ' +
     'currently a Full Stack Software Developer and Application Technical Lead for PNC Financial Services.',
-    position: 'right'
+    position: 'right',
+    photo: 'professionalpic.jpg'
+}
+
+// Posts
+export const aboutMePost = {
+    type: 'pic-desc',
+    content: [aboutMeParams]
+}
+
+export const programmingLanguagesPost = {
+    type: 'tri-desc',
+    content: [uiParams, apiParams, dbParams]
 }
