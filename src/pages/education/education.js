@@ -15,8 +15,8 @@ class Education extends Component {
       this.state = {}
       // Add function binding here
     }
-    // hello
     render() {
+      // Testing commits again
       return (
         <div className="education" data-testid="Education">
           <div className="educationHook">
