@@ -1,8 +1,7 @@
 import React , { Component } from 'react';
-import { uiParams, apiParams, dbParams, aboutMePost } from '../../models/enums/homepage.enum'
+import { aboutMePost, programmingLanguagesPost } from '../../models/enums/homepage.enum'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import Post from '../../components/post/post';
-import SmallPost from '../../components/small-post/small-post';
 import reactLogo from '../../assets/images/reactLogo.png'
 import angularLogo from '../../assets/images/angular-logo.png'
 import vueLogo from '../../assets/images/vueLogo.png'
@@ -34,12 +33,7 @@ class HomePage extends Component {
         {/* Stage two of the about page */}
         <AnimationOnScroll animateIn="animate__fadeIn" duration="2" >
           <div className="programmingLanguages">
-            <h1 className='plHeader'>Programming Languages</h1>
-            <div className="plPosts">
-              <SmallPost params={uiParams} />
-              <SmallPost params={apiParams} />
-              <SmallPost params={dbParams} />
-            </div>
+            <Post post={programmingLanguagesPost}></Post>
             <div className='logos'>
               <img className='sLogo' src={reactLogo} alt="reactLogo" />
               <img className='sLogo' src={angularLogo} alt="angularLogo" />

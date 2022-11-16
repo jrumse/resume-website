@@ -58,16 +58,19 @@ export const insta485 = {
 
 // Posts
 export const bachelorsPost = {
+    title: 'Bachelors',
     type: 'pic-desc',
     content: [educationParams]
 }
 
 export const courseStudyPost = {
+    title: 'Course Study',
     type: 'pic-desc',
     content: [courseStudyParams]
 }
 
 export const notableProjectsPost = {
+    title: 'Notable Projects',
     type: 'tri-desc',
     content: [skiLocale, assignmentCollector, insta485]
 }

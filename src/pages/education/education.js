@@ -1,7 +1,6 @@
 import React , { Component } from 'react';
 import Post from '../../components/post/post';
-import SmallPost from '../../components/small-post/small-post';
-import { assignmentCollector, bachelorsPost, courseStudyPost, insta485, skiLocale } from '../../models/enums/education.enum';
+import { bachelorsPost, courseStudyPost, notableProjectsPost } from '../../models/enums/education.enum';
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import eecsLogoLong from '../../assets/images/EECS-acronym-white.png'
 import './education.css';
@@ -27,12 +26,7 @@ class Education extends Component {
             <Post post={courseStudyPost} />
           </AnimationOnScroll>
           <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="eduPosts notableProjectsPost">
-            <h1 className='plHeader'>Notable Projects</h1>
-            <div className="plPosts">
-              <SmallPost params={skiLocale} />
-              <SmallPost params={assignmentCollector} />
-              <SmallPost params={insta485} />
-            </div>
+            <Post post={notableProjectsPost}></Post>
             <div className="eecsLogoLong">
               <a href="https://cse.engin.umich.edu/academics/undergraduate/computer-science-lsa/" 
               target="_blank" rel="noreferrer noopener">

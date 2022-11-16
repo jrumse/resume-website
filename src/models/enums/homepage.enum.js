@@ -31,11 +31,13 @@ export const aboutMeParams = {
 
 // Posts
 export const aboutMePost = {
+    title: 'About Me',
     type: 'pic-desc',
     content: [aboutMeParams]
 }
 
 export const programmingLanguagesPost = {
+    title: 'Programming Languages',
     type: 'tri-desc',
     content: [uiParams, apiParams, dbParams]
 }

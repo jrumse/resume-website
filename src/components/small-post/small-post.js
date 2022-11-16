@@ -10,6 +10,7 @@ class SmallPost extends Component {
     }
   
     render() {
+      console.log(this.props)
       return (
         <div className="SmallPost" data-testid="SmallPost">
           <h2 className="spHeader">{this.props.params.header}</h2>

@@ -1,0 +1,12 @@
+.TriDesc {
+}
+
+.triDescPosts {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.triDescHeader {
+    text-align: center;
+    margin-bottom: 4%;
+}
