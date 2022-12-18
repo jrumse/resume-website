@@ -11,7 +11,6 @@ class TriDesc extends Component {
     }
   
     render() {
-      console.log(this.props)
       return (
         <div className="TriDesc" data-testid="TriDesc">
           <h1 className='triDescHeader'>{ this.props.post.title }</h1>
