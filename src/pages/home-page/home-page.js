@@ -35,13 +35,34 @@ class HomePage extends Component {
           <div className="programmingLanguages">
             <Post post={programmingLanguagesPost}></Post>
             <div className='logos'>
-              <img className='sLogo' src={reactLogo} alt="reactLogo" />
-              <img className='sLogo' src={angularLogo} alt="angularLogo" />
-              <img className='sLogo' src={vueLogo} alt="vueLogo" />
-              <img className='sLogo' src={goLogo} alt="goLogo" />
-              <img className='sLogo' src={pyLogo} alt="pyLogo" />
-              <img className='sLogo' src={mongodbLogo} alt="mongodbLogo" />
-              <img className='sLogo' src={javaLogo} alt="javaLogo" />
+              <a className='sLogoLink' 
+              href="https://reactjs.org/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={reactLogo} alt="reactLogo" />
+              </a>
+              <a className='sLogoLink' 
+              href="https://angular.io/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={angularLogo} alt="angularLogo" />
+              </a>
+              <a className='sLogoLink' 
+              href="https://vuejs.org/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={vueLogo} alt="vueLogo" />
+              </a>
+              <a className='sLogoLink' 
+              href="https://go.dev/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={goLogo} alt="goLogo" />
+              </a>
+              <a className='sLogoLink' 
+              href="https://www.python.org/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={pyLogo} alt="pyLogo" />
+              </a>
+              <a className='sLogoLink' 
+              href="https://www.mongodb.com/home" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={mongodbLogo} alt="mongodbLogo" />
+              </a>
+              <a className='sLogoLink' 
+              href="https://docs.oracle.com/en/java/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={javaLogo} alt="javaLogo" />
+              </a>
             </div>
           </div>
         </AnimationOnScroll>

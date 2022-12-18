@@ -42,20 +42,26 @@
     margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
-
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    width: 90%;
+}
 
-    width: 80%;
+.sLogoLink {
+    /* width: 20%; */
+    margin-left: 3%;
+    margin-right: 3%;
+    /* height: inherit; */
+
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
 }
 
 .sLogo {
-    width: 10%;
-    height: 10%;
-    margin-top: auto;
-    margin-bottom: auto;
     transition: transform 250ms;
+    height: inherit;
+    width: inherit;
 }
 
 .sLogo:hover {
