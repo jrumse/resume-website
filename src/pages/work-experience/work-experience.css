@@ -1,3 +1,12 @@
 .work-experience {
-    height: 100vh;
+    margin-top: 15%;
+}
+
+.workExperienceHookText {
+    font-size: 40px;
+    text-align: center; 
+}
+
+.workPosts {
+    margin-top: 20%;
 }

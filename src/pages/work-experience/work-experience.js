@@ -1,5 +1,8 @@
 import React , { Component } from 'react';
 import './work-experience.css';
+import Post from '../../components/post/post';
+import { AnimationOnScroll } from 'react-animation-on-scroll'
+import { pncPost, rolePost } from '../../models/enums/work.enum';
 
 class WorkExperience extends Component {
 
@@ -11,7 +14,18 @@ class WorkExperience extends Component {
   
     render() {
       return (
-        <div className="work-experience" data-testid="WorkExperience">WorkExperience Component</div>
+        <div className="work-experience" data-testid="WorkExperience">
+          <div className="workExperienceHook">
+            <div className="workExperienceHookText One">Innovation distinguishes</div>
+            <div className="workExperienceHookText Two">between a leader and a follower.</div>
+          </div>
+          <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="workPosts pncPost" >
+            <Post post={pncPost} />
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="workPosts pncPost" >
+            <Post post={rolePost} />
+          </AnimationOnScroll>
+        </div>
       );
     }
 }

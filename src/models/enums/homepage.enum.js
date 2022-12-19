@@ -24,7 +24,7 @@ export const aboutMeParams = {
     message: 'I am a software developer and engineer from Kalamazoo, Michigan. ' +
     'I spent two years at Kalamazoo Valley Community College pursuing an Associates in Applied Mathematics, before ' +
     'transferring to the University of Michigan in Ann Arbor to complete a Bachelors in Computer Science. I am ' +
-    'currently a Full Stack Software Developer and Application Technical Lead for PNC Financial Services.',
+    'currently a Full Stack Software Engineer and Application Technical Lead for PNC Financial Services.',
     position: 'right',
     photo: 'professionalpic.jpg'
 }
