@@ -1,5 +1,6 @@
 import React , { Component } from 'react';
 import './contact.css';
+import { TypeAnimation } from 'react-type-animation';
 
 class Contact extends Component {
 
@@ -13,7 +14,7 @@ class Contact extends Component {
       return (
         <div className="contact" data-testid="Contact">
           <div className="contactHook">
-            <div className="contactHookText">Lets get in contact.</div>
+          <TypeAnimation className="contactHookText" sequence={['Lets get in contact.', 7000]} speed={25} />
           </div>
         </div>
       );

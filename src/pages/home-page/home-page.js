@@ -10,6 +10,7 @@ import pyLogo from '../../assets/images/pyLogo.png'
 import javaLogo from '../../assets/images/javaLogo.png'
 import mongodbLogo from '../../assets/images/mongodbLogo.png'
 import './home-page.css';
+import { TypeAnimation } from 'react-type-animation';
 
 class HomePage extends Component {
 
@@ -23,7 +24,7 @@ class HomePage extends Component {
     return (
       <div className="home-page">
         {/* Stage one of the about page */}
-        <div className="welcomeText">Welcome.</div>
+        <TypeAnimation className="welcomeText" sequence={['Welcome.', 7000]} speed={25} />
         <div className='aboutMe'>
           <AnimationOnScroll animateIn="animate__fadeIn" duration="2" >
             <Post post={aboutMePost} />

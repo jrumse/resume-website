@@ -4,6 +4,7 @@ import { bachelorsPost, courseStudyPost, notableProjectsPost } from '../../model
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import eecsLogoLong from '../../assets/images/EECS-acronym-white.png'
 import './education.css';
+import { TypeAnimation } from 'react-type-animation';
 
 class Education extends Component {
 
@@ -16,8 +17,8 @@ class Education extends Component {
       return (
         <div className="education" data-testid="Education">
           <div className="educationHook">
-            <div className="educationHookText One">One of the oldest and most</div>
-            <div className="educationHookText Two">respected programs in computation.</div>
+            <TypeAnimation className="educationHookText"
+            sequence={['One of the oldest and most respected programs in computation.', 7000]} speed={45} />
           </div>
           <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="eduPosts bachelorsPost" >
             <Post post={bachelorsPost} />
