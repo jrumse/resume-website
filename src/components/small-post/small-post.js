@@ -1,4 +1,5 @@
 import React , { Component } from 'react';
+import { Card, CardContent } from '@mui/material';
 import './small-post.css';
 
 class SmallPost extends Component {
@@ -13,9 +14,13 @@ class SmallPost extends Component {
       return (
         <div className="SmallPost" data-testid="SmallPost">
           <h2 className="spHeader">{this.props.params.header}</h2>
-          <p>
-            {this.props.params.message}
-          </p>
+          <Card className="sCard" elevation={0}>
+            <CardContent>
+              <p>
+                {this.props.params.message}
+              </p>
+            </CardContent>
+          </Card>
         </div>
       );
     }

@@ -16,8 +16,8 @@ export const roleParams = {
     message: "I started with PNC as an intern in 2020, and hired on as a software engineer " +
     "in 2021. My current position is Application Technical Lead for a full stack agile application. My day " +
     "to day responsibilities include developing new features for our UI and API, writing functional " + 
-    "tests for our QA environment, holding code reviews for pull requests, leading design sessions for " +
-    "new feature ideas, meeting with project stakeholders and creating mockups for feature requests, " +
+    "tests for our QA environment, holding code reviews for pull requests, leading design sessions, " +
+    "creating mockups for feature requests, " +
     "providing technical support for the team's software developers, and deploying new versions of our " +
     "product to production on a bi weekly basis. I also play an important role in vulnerability " + 
     "management, application disaster recovery planning, and version compatibility between our product " +

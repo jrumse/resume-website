@@ -1,4 +1,5 @@
 import React , { Component } from 'react';
+import { Card, CardContent } from '@mui/material';
 import './pic-desc.css';
 
 class PicDesc extends Component {
@@ -18,8 +19,12 @@ class PicDesc extends Component {
           </div>
           }
           <div className="text">
-            <h1>{this.props.params.header}</h1>
-            <p className="paragraph">{this.props.params.message}</p>
+            <h1 className="pHeader">{this.props.params.header}</h1>
+            <Card elevation={0} className="pCard">
+              <CardContent>
+                <p className="paragraph">{this.props.params.message}</p>
+              </CardContent>
+            </Card>
           </div>
           {this.props.params.position === 'right' &&
           <div className="photo">

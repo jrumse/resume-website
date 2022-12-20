@@ -29,3 +29,13 @@
 .paragraph {
     font-size: 20px;
 }
+
+.pCard {
+    color: white !important;
+    background-color: rgba(4, 12, 33, .1) !important;
+    border-radius: 15px !important;
+}
+
+.pHeader {
+    margin-left: 2%;
+}
