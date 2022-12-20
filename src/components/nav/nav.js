@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React , { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -9,9 +9,12 @@ import { tabMap } from '../../models/enums/tabmap.enum';
 function Nav(props) {
   // State
   const [navTitleText ] = useState('josh_rumsey_sde');
+  const location = useLocation()
 
   // Set Nav on init
-  props.handleNavChange(null, tabMap[useLocation().pathname])
+  useEffect(() => {
+    props.handleNavChange(null, tabMap[location.pathname])
+  }, []);
 
   // Reset Nav
   const resetNav = () => {

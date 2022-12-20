@@ -10,7 +10,7 @@ import Footer from './components/footer/footer';
 
 function App() {
   // State
-  const [tabValue, setTabValue] = useState(undefined);
+  const [tabValue, setTabValue] = useState(0);
 
   // Handle Nav Change
   const handleNavChange = (e, newActiveTab) => {
