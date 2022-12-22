@@ -1,0 +1,18 @@
+.contactFormContent {
+}
+
+.contactFormCard {
+    width: 40vw;
+    display: inline-block;
+    background-color: rgba(4, 12, 33, .1) !important;
+    border-radius: 15px !important;
+}
+
+.cFormInput {
+    margin-top: 1.5% !important;
+    width: 100% !important;
+}
+
+.contactHeader {
+    margin-left: 1%;
+}

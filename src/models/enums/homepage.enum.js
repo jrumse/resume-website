@@ -10,7 +10,7 @@ export const apiParams = {
     header: 'API',
     message: 'I am experienced in writing API applications in GoLang, Java Spring Framework, ' +
     'Java DBMS, Python Django Server, Python Flask Server, and Express.js. My APIs have interfaced ' +
-    'with both my own databases as well as third party APIs and datasources.'
+    'with both my own databases as well as third party datasources and APIs.'
 }
   
 export const dbParams = {
