@@ -1,6 +1,3 @@
-.contactFormContent {
-}
-
 .contactFormCard {
     width: 40vw;
     display: inline-block;
@@ -15,4 +12,10 @@
 
 .contactHeader {
     margin-left: 1%;
+}
+
+.sendBtn {
+    width: 100%;
+    margin-top: 1.5% !important;
+    text-transform: unset !important;
 }

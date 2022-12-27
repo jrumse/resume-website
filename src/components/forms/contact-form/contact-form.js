@@ -1,4 +1,4 @@
-import { Card, CardContent, TextField } from '@mui/material';
+import { Card, CardContent, TextField, Button } from '@mui/material';
 import React from 'react';
 import './contact-form.css'
 
@@ -32,6 +32,9 @@ function ContactForm() {
             <TextField className="cFormInput" label="Phone Number" variant="outlined" sx={style.textfield} />
             <TextField className="cFormInput" label="Message" variant="outlined" multiline rows={8} maxRows={8} 
             sx={style.textfield} inputProps={style.mlineinput} />
+          </div>
+          <div>
+            <Button className="sendBtn" variant="outlined" sx={{ p: 1, borderColor: 'rgba(255, 255, 255, .2)' }}>Send Email</Button>
           </div>
         </CardContent>
       </Card>
