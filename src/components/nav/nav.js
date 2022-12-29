@@ -19,11 +19,11 @@ function Nav(props) {
   // Reset Nav
   const resetNav = () => {
     props.handleNavChange(null, 0)
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   }
 
   return (
     <div className="navContent">
-      {/* TODO */}
       <div className="title"><Link to="/" className="linkMain" 
       onClick={resetNav}>{navTitleText}</Link></div>
       <div className="navLinks">
