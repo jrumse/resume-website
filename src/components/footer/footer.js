@@ -10,80 +10,86 @@ import './footer.css';
 
 class Footer extends Component {
 
-    constructor(props) {
-      super(props);
-      this.state = {}
-      // Add function binding here
-    }
-  
-    render() {
-      return (
-        <div className="Footer" data-testid="Footer">
-          <Divider className="divider" />
-          <div className="hTitle">
-            <div>
-              josh_rumsey_sde
-            </div>
-            <div className="footerTitleSpacing" />
+  constructor(props) {
+    super(props);
+    this.state = {}
+    // Add function binding here
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(e) {
+    this.props.handleNavChange(null, Number(e.target.getAttribute("value")));
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
+
+  render() {
+    return (
+      <div className="Footer" data-testid="Footer">
+        <Divider className="divider" />
+        <div className="hTitle">
+          <div>
+            josh_rumsey_sde
           </div>
-          <div className="hContent">
-            <div>
-              {/* Overview Column */}
-              <h2>Overview</h2>
-              <div className="footerLinks">
-                <Link to="/" className="footerLink" >
-                  <h3 onClick={() => this.props.handleNavChange(null, 0)}>About</h3>
-                </Link>
-                <Link to="education" className="footerLink" >
-                  <h3 onClick={() => this.props.handleNavChange(null, 1)}>Education</h3>
-                </Link>
-                <Link to="experience" className="footerLink" >
-                  <h3 onClick={() => this.props.handleNavChange(null, 2)}>Work Experience</h3>
-                </Link>
-                <Link to="contact" className="footerLink" >
-                  <h3 onClick={() => this.props.handleNavChange(null, 3)}>Contact</h3>
-                </Link>
-              </div>
+          <div className="footerTitleSpacing" />
+        </div>
+        <div className="hContent">
+          <div>
+            {/* Overview Column */}
+            <h2>Overview</h2>
+            <div className="footerLinks">
+              <Link to="/" className="footerLink">
+                <h3 value={0} onClick={this.handleClick}>About</h3>
+              </Link>
+              <Link to="education" className="footerLink" >
+                <h3 value={1} onClick={this.handleClick}>Education</h3>
+              </Link>
+              <Link to="experience" className="footerLink" >
+                <h3 value={2} onClick={this.handleClick}>Work Experience</h3>
+              </Link>
+              <Link to="contact" className="footerLink" >
+                <h3 value={3} onClick={this.handleClick}>Contact</h3>
+              </Link>
             </div>
-            {/* Resources */}
-            <div>
-              <h2>Resources</h2>
-              <div className="footerLinks">
-                <a href="https://github.com/jrumse" target="_blank" rel="noreferrer noopener" className="footerLink" >
-                  <div className="textWithLogo">
-                    <h3 className="linkText">GitHub</h3>
-                    <img src={githubLogo} alt="githubLogo" className="linkLogo" />
-                  </div>
-                </a>
-                <a href="https://www.linkedin.com/in/joshrumsey" target="_blank" rel="noreferrer noopener" className="footerLink" >
-                  <div className="textWithLogo">
-                    <h3 className="linkText">LinkedIn</h3>
-                    <img src={linkedInLogo} alt="linkedInLogo" className="linkLogo" />
-                  </div>
-                </a>
-                <a href={resume} download="joshRumseyResume" className="footerLink" >
-                  <div className="textWithLogo" >
-                    <h3 className="linkText" >Resume</h3>
-                    <img src={documentLogo} alt="downloadResumeLogo" className="linkLogo" />
-                  </div>
-                </a>
-              </div>
+          </div>
+          {/* Resources */}
+          <div>
+            <h2>Resources</h2>
+            <div className="footerLinks">
+              <a href="https://github.com/jrumse" target="_blank" rel="noreferrer noopener" className="footerLink" >
+                <div className="textWithLogo">
+                  <h3 className="linkText">GitHub</h3>
+                  <img src={githubLogo} alt="githubLogo" className="linkLogo" />
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/joshrumsey" target="_blank" rel="noreferrer noopener" className="footerLink" >
+                <div className="textWithLogo">
+                  <h3 className="linkText">LinkedIn</h3>
+                  <img src={linkedInLogo} alt="linkedInLogo" className="linkLogo" />
+                </div>
+              </a>
+              <a href={resume} download="joshRumseyResume" className="footerLink" >
+                <div className="textWithLogo" >
+                  <h3 className="linkText" >Resume</h3>
+                  <img src={documentLogo} alt="downloadResumeLogo" className="linkLogo" />
+                </div>
+              </a>
             </div>
-            <div>
-            <h2>Powered By</h2>
-              <div className="footerLinks">
-                <a href="https://reactjs.org/" target="_blank" rel="noreferrer noopener" className="footerLink" >
-                  <div className="textWithLogo" >
-                    <h3 className="linkText">React</h3>
-                    <img src={reactWhiteLogo} alt="reactWhiteLogo" className="linkLogo" />
-                  </div>
-                </a>
-              </div>
+          </div>
+          <div>
+          <h2>Powered By</h2>
+            <div className="footerLinks">
+              <a href="https://reactjs.org/" target="_blank" rel="noreferrer noopener" className="footerLink" >
+                <div className="textWithLogo" >
+                  <h3 className="linkText">React</h3>
+                  <img src={reactWhiteLogo} alt="reactWhiteLogo" className="linkLogo" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
-      );
-    }
+      </div>
+    );
+  }
 }
 
 export default Footer;
