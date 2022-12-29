@@ -1,10 +1,8 @@
-import React , { useEffect, useState } from 'react';
+import React from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from '@mui/material';
 import './alert-dialog.css';
 
 function AlertDialog(props) {
-  // State
-
   // Style
   const dialogStyle = {
     style: {

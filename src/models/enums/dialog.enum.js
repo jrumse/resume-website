@@ -23,3 +23,8 @@ export const emailSent = {
     title: "Email Sent", 
     statement: "Your email has been sent - thank you for reaching out! I will get back to you within the next 24 hours."
 }
+
+export const emailError = {
+    title: "Unable to Send Email",
+    statement: "There was an error sending the email: "
+}

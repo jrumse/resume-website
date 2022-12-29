@@ -1,7 +1,8 @@
 import { Card, CardContent, TextField, Button } from '@mui/material';
-import { nameRequired, emailRequired, messageRequired, emptyAlert, emailSent } from '../../../models/enums/dialog.enum';
+import { nameRequired, emailRequired, messageRequired, emptyAlert, emailSent, emailError } from '../../../models/enums/dialog.enum';
 import React, { useState, useRef } from 'react';
 import AlertDialog from '../../dialog/alert-dialog/alert-dialog';
+import LoadingDialog from '../../dialog/loading-dialog/loading-dialog';
 import emailjs from '@emailjs/browser';
 import './contact-form.css'
 
@@ -12,40 +13,51 @@ function ContactForm() {
   const [number, setNumberValue] = useState("");
   const [message, setMessageValue] = useState("");
   const [alert, setAlert] = useState(false);
+  const [load, setLoad] = useState(false);
   const [alertContent, setAlertContent] = useState(emptyAlert);
+
 
   // Form
   const contactForm = useRef();
+
 
   // Form Functions
   const handleSubmit = (e) => {
     // Prevent Default
     e.preventDefault();
 
+    // Trigger Loading Spinner
+    setLoad(true);
+
     // Handle Validation
     let isValid = inputValidation();
+
     // Validation Handling
     if (!isValid) {
+      setLoad(false);
       return;
     }
 
     // Hit External API to send email.
-    // Uncomment Lines 34 through 41 to enable.
-    // emailjs.sendForm('service_9zfis6f', 'template_sbzj5dt', contactForm.current, 'jvTbsz4QSwL50Nri7')
-    //   .then(() => {
-    //       setAlertContent(emailSent);
-    //       setAlert(true);
-    //   }, (error) => {
-    //       // TODO: Return Error Dialog
-    //       console.log(error.text);
-    //   });
+    emailjs.sendForm('service_9zfis6f', 'template_sbzj5dt', contactForm.current, 'jvTbsz4QSwL50Nri7')
+      .then(() => {
+          // Unset Load Dialog
+          setLoad(false);
+          // Set Successful Email Dialog
+          setAlertContent(emailSent);
+          setAlert(true);
+      }, (error) => {
+          // Unset Load Dialog
+          setLoad(false);
+          // Return Error Dialog
+          let sendError = emailError;
+          sendError.statement = emailError.statement + error.text;
+          setAlertContent(sendError);
+          setAlert(true);
+      });
     // TODO: Post Message Receipt to the Database
 
-    // Send Confirmation Dialog
-    setAlertContent(emailSent);
-    setAlert(true);
-
-    // TODO: Find a way to clear the form
+    // Clear the form
     setNameValue("");
     setEmailValue("");
     setNumberValue("");
@@ -85,6 +97,7 @@ function ContactForm() {
     setAlert(false);
   }
 
+
   // Textfield Styling
   let style={ 
     textfield: {
@@ -99,19 +112,20 @@ function ContactForm() {
     }
   }
 
+
   return (
     <form ref={contactForm} className="contactFormContent">
       <h1 className="contactHeader">Contact</h1>
       <Card elevation={0} className="contactFormCard">
         <CardContent>
           <div>
-            <TextField className="cFormInput" label="Name" variant="outlined" name="user_name"
+            <TextField className="cFormInput" label="Name" variant="outlined" name="user_name" value={name}
               sx={style.textfield} onChange={(e) => {setNameValue(e.target.value)}} />
-            <TextField className="cFormInput" label="Email" variant="outlined" name="user_email"
+            <TextField className="cFormInput" label="Email" variant="outlined" name="user_email" value={email}
               sx={style.textfield} onChange={(e) => {setEmailValue(e.target.value)}} />
-            <TextField className="cFormInput" label="Phone Number (Optional)" variant="outlined" name="user_number"
+            <TextField className="cFormInput" label="Phone Number (Optional)" variant="outlined" name="user_number" value={number}
               sx={style.textfield} onChange={(e) => {setNumberValue(e.target.value)}} />
-            <TextField className="cFormInput" label="Message" variant="outlined" multiline maxRows={8} minRows={8} name="message"
+            <TextField className="cFormInput" label="Message" variant="outlined" multiline maxRows={8} minRows={8} name="message" value={message}
               sx={style.textfield} inputProps={style.mlineinput} onChange={(e) => {setMessageValue(e.target.value)}} />
           </div>
           <div>
@@ -121,6 +135,7 @@ function ContactForm() {
         </CardContent>
       </Card>
       <AlertDialog open={alert} handleClose={handleFormClose} content={alertContent} ></AlertDialog>
+      <LoadingDialog open={load}></LoadingDialog>
     </form>
   );
 }
