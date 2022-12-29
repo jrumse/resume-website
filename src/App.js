@@ -16,8 +16,6 @@ function App() {
   const handleNavChange = (e, newActiveTab) => {
     // Set the new active tab
     setTabValue(newActiveTab)
-    // Scroll to top of page after a new tab selection
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   }
 
   // Render
