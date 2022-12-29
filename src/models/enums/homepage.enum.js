@@ -37,7 +37,7 @@ export const aboutMePost = {
 }
 
 export const programmingLanguagesPost = {
-    title: 'Programming Languages',
+    title: 'Technical Skills',
     type: 'tri-desc',
     content: [uiParams, apiParams, dbParams]
 }
