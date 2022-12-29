@@ -14,11 +14,14 @@
     overflow: hidden;
     margin-top: auto;
     margin-bottom: auto;
+    /* Fixes Safari Scale Transition that removes and reapplies border radius */
+    will-change: transform;
 }
 
 .photo img {
     width: 18vw;
     transition: transform .5s ease;
+    border-radius: 1em !important;
 }
 
 .photo:hover img {

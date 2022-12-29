@@ -12,9 +12,9 @@ class Footer extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {};
     // Add function binding here
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(e) {
