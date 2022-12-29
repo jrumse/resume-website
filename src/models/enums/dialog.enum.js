@@ -21,5 +21,5 @@ export const messageRequired = {
 
 export const emailSent = {
     title: "Email Sent", 
-    statement: "Your email has been sent - thank you for reaching out! I will get back to you in within the next 24 hours."
+    statement: "Your email has been sent - thank you for reaching out! I will get back to you within the next 24 hours."
 }
