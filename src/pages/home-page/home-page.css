@@ -18,24 +18,8 @@
     100% { opacity: 1; }
 }
 
-/*  About Me */
-.aboutMe {
+.post {
     margin-top: 20%;
-}
-
-/* Programming Languages */
-.programmingLanguages {
-    margin-top: 20%
-}
-
-.plPosts {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.plHeader {
-    text-align: center;
-    margin-bottom: 4%;
 }
 
 .logos {
@@ -48,11 +32,8 @@
 }
 
 .sLogoLink {
-    /* width: 20%; */
     margin-left: 3%;
     margin-right: 3%;
-    /* height: inherit; */
-
     margin-top: auto;
     margin-bottom: auto;
     width: 100%;
