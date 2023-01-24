@@ -17,6 +17,7 @@ import flaskLogo from '../../assets/images/flaskLogo.png'
 import jenkinsLogo from '../../assets/images/jenkinsLogo.png'
 import './home-page.css';
 import { TypeAnimation } from 'react-type-animation';
+import { endpoints } from '../../models/enums/endpoints.enum';
 
 class HomePage extends Component {
 
@@ -30,7 +31,7 @@ class HomePage extends Component {
 
   // Component Did Mount
   componentDidMount() {
-    fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + '/post/about?content=true')
+    fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + endpoints.postAboutContent)
       .then(result => result.json())
       .then((result) => {
         this.setState({

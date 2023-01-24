@@ -4,6 +4,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import eecsLogoLong from '../../assets/images/EECS-acronym-white.png'
 import './education.css';
 import { TypeAnimation } from 'react-type-animation';
+import { endpoints } from '../../models/enums/endpoints.enum';
 
 class Education extends Component {
 
@@ -17,7 +18,7 @@ class Education extends Component {
 
   // Component Did Mount
   componentDidMount() {
-    fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + '/post/education?content=true')
+    fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + endpoints.postEducationContent)
       .then(result => result.json())
       .then((result) => {
         this.setState({

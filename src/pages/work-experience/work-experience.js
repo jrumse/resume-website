@@ -3,6 +3,7 @@ import './work-experience.css';
 import Post from '../../components/post/post';
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { TypeAnimation } from 'react-type-animation';
+import { endpoints } from '../../models/enums/endpoints.enum';
 
 class WorkExperience extends Component {
 
@@ -16,7 +17,7 @@ class WorkExperience extends Component {
 
   // Component Did Mount
   componentDidMount() {
-    fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + '/post/work?content=true')
+    fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + endpoints.postWorkContent)
       .then(result => result.json())
       .then((result) => {
         this.setState({
