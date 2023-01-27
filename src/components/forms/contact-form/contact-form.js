@@ -41,7 +41,8 @@ function ContactForm() {
     }
 
     // Hit External API to send email.
-    emailjs.sendForm('service_9zfis6f', 'template_sbzj5dt', contactForm.current, 'jvTbsz4QSwL50Nri7')
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
+      contactForm.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then(() => {
           // Unset Load Dialog
           setLoad(false);
