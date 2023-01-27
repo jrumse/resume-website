@@ -52,7 +52,7 @@ class HomePage extends Component {
         <TypeAnimation className="welcomeText" sequence={['Welcome.', 7000]} speed={25} />
         {/* Loop though posts and display then im a fade in animation wrapper */}
         {this.state.posts.map((post, index) => (
-        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="post" >
+        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="post" key={"post" + index} >
           <Post post={post} />
           {/* If Last post in the list, display double skill carousel */}
           {index === this.state.posts.length - 1 &&

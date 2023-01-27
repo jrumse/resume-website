@@ -41,7 +41,7 @@ class Education extends Component {
         </div>
         {/* Loop though posts and display then im a fade in animation wrapper */}
         {this.state.posts.map((post, index) => (
-        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="eduPosts bachelorsPost" >
+        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="eduPosts bachelorsPost" key={"post" + index} >
           <Post post={post} />
           {/* If Last post in the list, display Michigan EECS Logo and Link */}
           {index === this.state.posts.length - 1 &&

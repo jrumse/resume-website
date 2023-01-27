@@ -39,8 +39,8 @@ class WorkExperience extends Component {
           sequence={['Innovation distinguishes between a leader and a follower.', 7000]} speed={45} />
         </div>
         {/* Loop though posts and display then im a fade in animation wrapper */}
-        {this.state.posts.map(post => (
-        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="workPosts pncPost" >
+        {this.state.posts.map((post, index) => (
+        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="workPosts pncPost" key={"post" + index} >
           <Post post={post} />
         </AnimationOnScroll>
         ))}
