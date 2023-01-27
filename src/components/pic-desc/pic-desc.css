@@ -19,7 +19,7 @@
 }
 
 .photo img {
-    width: 18vw;
+    width: 24rem;
     transition: transform .5s ease;
     border-radius: 1em !important;
 }
