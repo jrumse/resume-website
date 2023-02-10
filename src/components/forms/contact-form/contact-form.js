@@ -117,11 +117,11 @@ function ContactForm() {
   const postContactReceipt = () => {
     // Get Current Date in EST
     const date = new Date();
-    var offset = -300; //Timezone offset for EST in minutes.
+    var offset = -300; // Timezone offset for EST in minutes.
     var estDate = new Date(date.getTime() + offset*60*1000);
 
     // Create new ContactReceipt model
-    let newContactReceipt = new ContactReceipt(name, email, number, name, estDate);
+    let newContactReceipt = new ContactReceipt(name, email, number, message, estDate);
 
     // Post Message Receipt to the Database
     fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + endpoints.contact, {
