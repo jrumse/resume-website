@@ -1,5 +1,4 @@
 import React , { Component } from 'react';
-import { aboutMePost, programmingLanguagesPost } from '../../models/enums/homepage.enum'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import Post from '../../components/post/post';
 import reactLogo from '../../assets/images/reactLogo.png'
@@ -18,30 +17,47 @@ import flaskLogo from '../../assets/images/flaskLogo.png'
 import jenkinsLogo from '../../assets/images/jenkinsLogo.png'
 import './home-page.css';
 import { TypeAnimation } from 'react-type-animation';
+import { endpoints } from '../../models/enums/endpoints.enum';
 
 class HomePage extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      posts: []
+    }
+    // Add function binding here
   }
-  // Add function binding here
+
+  // Component Did Mount
+  componentDidMount() {
+    fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + endpoints.postAboutContent)
+      .then(result => result.json())
+      .then((result) => {
+        this.setState({
+          posts: result
+        })
+        return result; 
+      })
+      .catch((error) => {
+        // TODO: Dialog Error Handling
+        alert(error);
+      })
+  }
 
   render() {
     return (
       <div className="home-page">
         {/* Stage one of the about page */}
         <TypeAnimation className="welcomeText" sequence={['Welcome.', 7000]} speed={25} />
-        <div className='aboutMe'>
-          <AnimationOnScroll animateIn="animate__fadeIn" duration="2" >
-            <Post post={aboutMePost} />
-          </AnimationOnScroll>
-        </div>
-
-        {/* Stage two of the about page */}
-        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" >
-          <div className="programmingLanguages">
-            <Post post={programmingLanguagesPost}></Post>
+        {/* Loop though posts and display then im a fade in animation wrapper */}
+        {this.state.posts.map((post, index) => (
+        <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="post" key={"post" + index} >
+          <Post post={post} />
+          {/* If Last post in the list, display double skill carousel */}
+          {index === this.state.posts.length - 1 &&
+          <div>
+            {/* Carousel Row 1 */}
             <div className='logos'>
               <a className='sLogoLink' 
               href="https://reactjs.org/" target="_blank" rel="noreferrer noopener">
@@ -72,6 +88,7 @@ class HomePage extends Component {
                 <img className='sLogo' src={javaLogo} alt="javaLogo" />
               </a>
             </div>
+            {/* Carousel Row 2 */}
             <div className='logos'>
               <a className='sLogoLink' 
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer noopener">
@@ -102,8 +119,9 @@ class HomePage extends Component {
                 <img className='sLogo' src={jenkinsLogo} alt="jenkinsLogo" />
               </a>
             </div>
-          </div>
+          </div>}
         </AnimationOnScroll>
+        ))}
       </div>
     );
   }

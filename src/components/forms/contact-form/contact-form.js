@@ -5,6 +5,8 @@ import AlertDialog from '../../dialog/alert-dialog/alert-dialog';
 import LoadingDialog from '../../dialog/loading-dialog/loading-dialog';
 import emailjs from '@emailjs/browser';
 import './contact-form.css'
+import { endpoints } from '../../../models/enums/endpoints.enum';
+import ContactReceipt from '../../../models/interfaces/contact.class';
 
 function ContactForm() {
   // State
@@ -39,13 +41,11 @@ function ContactForm() {
     }
 
     // Hit External API to send email.
-    emailjs.sendForm('service_9zfis6f', 'template_sbzj5dt', contactForm.current, 'jvTbsz4QSwL50Nri7')
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
+      contactForm.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then(() => {
           // Unset Load Dialog
           setLoad(false);
-          // Set Successful Email Dialog
-          setAlertContent(emailSent);
-          setAlert(true);
       }, (error) => {
           // Unset Load Dialog
           setLoad(false);
@@ -54,8 +54,22 @@ function ContactForm() {
           sendError.statement = emailError.statement + error.text;
           setAlertContent(sendError);
           setAlert(true);
-      });
-    // TODO: Post Message Receipt to the Database
+      })
+      .then(() => {
+          // If Email Service was Successful, then post the message receipt
+          postContactReceipt();
+          // Set Successful Email Dialog
+          setAlertContent(emailSent);
+          setAlert(true);
+      }, (error) => {
+          // Unset Load Dialog
+          setLoad(false);
+          // Return Error Dialog
+          let postError = emailError;
+          postError.statement = emailError.statement + error.text;
+          setAlertContent(postError);
+          setAlert(true);
+      }) 
 
     // Clear the form
     setNameValue("");
@@ -63,6 +77,7 @@ function ContactForm() {
     setNumberValue("");
     setMessageValue("");
   }
+
 
   const inputValidation = () => {
     // Error Handling for Name
@@ -93,8 +108,32 @@ function ContactForm() {
     return true;
   }
 
+
   const handleFormClose = () => {
     setAlert(false);
+  }
+
+
+  const postContactReceipt = () => {
+    // Get Current Date in EST
+    const date = new Date();
+    var offset = -300; // Timezone offset for EST in minutes.
+    var estDate = new Date(date.getTime() + offset*60*1000);
+
+    // Create new ContactReceipt model
+    let newContactReceipt = new ContactReceipt(name, email, number, message, estDate);
+
+    // Post Message Receipt to the Database
+    fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + endpoints.contact, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      mode: 'cors',
+      body: JSON.stringify(newContactReceipt.getContactReceipt())
+    })
+      .then(response => response.json())
+      .then(data => console.log(data));
   }
 
 

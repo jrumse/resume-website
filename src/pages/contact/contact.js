@@ -16,7 +16,7 @@ class Contact extends Component {
       return (
         <div className="contact" data-testid="Contact">
           <div className="contactHook">
-            <TypeAnimation className="contactHookText" sequence={["Let's get in contact.", 7000]} speed={25} />
+            <TypeAnimation className="contactHookText" sequence={["Let's get in touch.", 7000]} speed={25} />
           </div>
           <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="cForm">
             <ContactForm />
