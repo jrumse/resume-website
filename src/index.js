@@ -17,7 +17,8 @@ let theme = createTheme({
     fontFamily: [
       'Roboto Mono',
       'monospace'
-    ].join(",")
+    ].join(","),
+    fontSize: 12,
   }
 });
 

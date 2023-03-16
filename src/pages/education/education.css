@@ -1,23 +1,23 @@
 .education {
-    margin-top: 15%;
+    margin-top: 60%;
 }
 
 .educationHookText {
-    font-size: 40px;
+    font-size: 18px;
     text-align: center;
     animation: fadeIn 1s;
-    max-width: 56rem;
+    max-width: 25rem;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 10%;
+    padding-bottom: 60%;
 }
 
 .eduPosts {
-    margin-top: 20%;
+    margin-top: 60%;
 }
 
 .eecsLogoPng {
-    width: 600px;
+    width: 300px;
     transition: transform 250ms;
 }
 
@@ -26,7 +26,56 @@
 }
 
 .eecsLogoLong {
-    margin-top: 3.5%;
+    margin-top: 11.5%;
     display: flex;
     justify-content: space-around;
+}
+
+@media only screen and (min-width: 765px) {
+    .education {
+        margin-top: 48%;
+    }
+
+    .educationHookText {
+        font-size: 27px;
+        max-width: 40rem;
+        padding-bottom: 25%;
+    }
+
+    .eduPosts {
+        margin-top: 50%;
+    }
+
+    .eecsLogoPng {
+        width: 450px;
+    }
+
+    .eecsLogoLong {
+        margin-top: 7%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .education {
+        margin-top: 15%;
+    }
+
+    .educationHookText {
+        font-size: 40px;
+        max-width: 56rem;
+        padding-bottom: 10%;
+    }
+
+    .eduPosts {
+        margin-top: 20%;
+    }
+
+    .eecsLogoPng {
+        width: 600px;
+    }
+
+    .eecsLogoLong {
+        margin-top: 3.5%;
+    }
 }

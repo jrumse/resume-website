@@ -1,43 +1,100 @@
-a {
-    margin-right: 1%;
-}
-
 .navContent {
+    /* Blur */
     backdrop-filter: blur(20px) !important;
-    display: flex;
-    justify-content: space-around;
     /* Sticky Navbar */
     position: sticky;
     top: 0;
     /* Navbar blur dimensions */
-    padding-top: 4vh;
-    padding-bottom: 1vh;
-    width: 100%;
     z-index: 1;
+
+    padding-top: 2vh;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.85%;
+    padding-right: 1.85%;
+    
 }
 
 .title {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 550;
-}
-
-.navLinks {
-    display: flex;
-    justify-content: space-between;
-}
-
-.link {
-    text-decoration: none !important;
-    color: white !important;
-    margin: auto;
-    font-size: 16px !important;
-    /* Unset All Caps Tabs */
-    text-transform: unset !important;
+    text-align: center;
 }
 
 .linkMain {
     text-decoration: none !important;
     color: white !important;
-    margin: auto;
     transition: transform .2s;
+}
+
+.navLinks {
+    display:inline-block;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+.link {
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 10px !important;
+    /* Unset All Caps Tabs */
+    text-transform: unset !important;
+}
+
+@media only screen and (min-width: 765px) {
+    
+    .title {
+        font-size: 30px;
+    }
+    
+    .navLinks {
+        margin-top: 1em;
+    }
+    
+    .link {
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    a {
+        margin-right: 1%;
+    }
+    
+    .navContent {
+        display: flex;
+        justify-content: space-around;
+        /* Navbar blur dimensions */
+        padding-top: 4vh;
+        padding-bottom: 1vh;
+        width: 100%;
+        z-index: 1;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .title {
+        font-size: 36px;
+        margin: none;
+        text-align: none;
+    }
+    
+    .navLinks {
+        margin-top: 0;
+    }
+    
+    .link {
+        margin: auto;
+        font-size: 16px !important;
+    }
+    
+    .linkMain {
+        text-decoration: none !important;
+        color: white !important;
+        transition: transform .2s;
+    }
 }

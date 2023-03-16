@@ -9,6 +9,8 @@ body {
   background: #A80606;
   background: -webkit-linear-gradient(top left, #A80606, #2E3FA2);
   background: -moz-linear-gradient(top left, #A80606, #2E3FA2);
+  background-image: -ms-linear-gradient(top left, #A80606, #2E3FA2);
+  background-image: -o-linear-gradient(top left, #A80606, #2E3FA2); 
   background: linear-gradient(to bottom right, #A80606, #2E3FA2);
 }
 
@@ -35,4 +37,13 @@ code {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Preserve background gradient on mobile devices */
+@media only screen and (min-width: 375px) and (max-width: 820px) {
+  body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 }
