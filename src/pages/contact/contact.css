@@ -1,16 +1,46 @@
 .contact {
-    margin-top: 16%;
+    margin-top: 60%;
 }
 
 .contactHookText {
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
     animation: fadeIn 1s;
-    padding-bottom: 10%;
+    padding-bottom: 60%;
 }
 
 .cForm {
-    margin-top: 20%;
+    margin-top: 60%;
     display: flex;
     justify-content: center
+}
+
+@media only screen and (min-width: 765px) {
+    .contact {
+        margin-top: 50%;
+    }
+    
+    .contactHookText {
+        font-size: 30px;
+        padding-bottom: 25%;
+    }
+    
+    .cForm {
+        margin-top: 50%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .contact {
+        margin-top: 16%;
+    }
+    
+    .contactHookText {
+        font-size: 40px;
+        padding-bottom: 10%;
+    }
+    
+    .cForm {
+        margin-top: 20%;
+    }
 }

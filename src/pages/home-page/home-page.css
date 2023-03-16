@@ -1,15 +1,15 @@
 /* Page */
 .home-page {
-    margin-top: 16%;
+    margin-top: 60%;
     scroll-behavior: smooth;
 }
 
 /* Welcome Text */
 .welcomeText {
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
     animation: fadeIn 1s; 
-    padding-bottom: 10%;
+    padding-bottom: 60%;
 }
 
 @keyframes fadeIn {
@@ -18,9 +18,10 @@
 }
 
 .post {
-    margin-top: 20%;
+    margin-top: 60%;
 }
 
+/* Logos later */
 .logos {
     margin-top: 2%;
     margin-left: auto;
@@ -46,4 +47,67 @@
 
 .sLogo:hover {
     transform: translateY(-20px);
+}
+
+@media only screen and (min-width: 765px) {
+
+    /* Page */
+    .home-page {
+        margin-top: 50%;
+    }
+
+    .welcomeText {
+        font-size: 30px;
+        padding-bottom: 25%;
+    }
+
+    .post {
+        margin-top: 50%;
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    /* Page */
+    .home-page {
+        margin-top: 16%;
+    }
+
+    /* Welcome Text */
+    .welcomeText {
+        font-size: 40px;
+        padding-bottom: 10%;
+    }
+
+    .post {
+        margin-top: 20%;
+    }
+
+    .logos {
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-evenly;
+        width: 90%;
+    }
+
+    .sLogoLink {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 85%;
+    }
+
+    .sLogo {
+        transition: transform 250ms;
+        height: inherit;
+        width: inherit;
+    }
+
+    .sLogo:hover {
+        transform: translateY(-20px);
+    }
 }

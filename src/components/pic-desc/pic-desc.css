@@ -1,25 +1,32 @@
 .PicDesc {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .text {
-    width: 29%;
+    order: 1;
     margin-top: auto;
     margin-bottom: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: 0fr 1fr;
 }
 
 .photo {
+    order: 2;
     border-radius: 1em;
+    width: 80%;
     overflow: hidden;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 1em;
     /* Fixes Safari Scale Transition that removes and reapplies border radius */
     will-change: transform;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .photo img {
-    width: 24rem;
+    width: 100%;
     transition: transform .5s ease;
     border-radius: 1em !important;
 }
@@ -27,10 +34,11 @@
 .photo:hover img {
     transform: scale(1.1);
     z-index: initial;
+    border-radius: 1em;
 }
 
 .paragraph {
-    font-size: 20px;
+    font-size: 12px;
 }
 
 .pCard {
@@ -40,5 +48,59 @@
 }
 
 .pHeader {
+    font-size: 16px !important;
     margin-left: 2%;
+}
+
+@media only screen and (min-width: 765px) {
+
+    .photo {
+        border-radius: 1em;
+        width: 50%;
+    }
+
+    .paragraph {
+        font-size: 16px;
+    }
+
+    .pHeader {
+        font-size: 24px !important;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .PicDesc {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .text {
+        order: 0;
+        width: 29%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .photo {
+        order: 0;
+        width: inherit;
+        border-radius: 1em;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .photo img {
+        width: 24rem;
+    }
+
+    .paragraph {
+        font-size: 20px;
+    }
+
+    .pHeader {
+        font-size: 32px !important;
+    }
 }
