@@ -1,12 +1,26 @@
 .TriDesc {
 }
 
-.triDescPosts {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .triDescHeader {
     text-align: center;
     margin-bottom: 2%;
+    font-size: 16px !important;
+}
+
+@media only screen and (min-width: 765px) {
+    
+    .triDescHeader {
+        font-size: 24px !important;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .triDescPosts {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .triDescHeader {
+        font-size: 32px !important;
+    }
 }
