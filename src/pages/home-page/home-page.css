@@ -23,30 +23,38 @@
 
 /* Logos later */
 .logos {
-    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    justify-content: space-evenly;
-    width: 90%;
 }
 
 .sLogoLink {
-    margin-left: 3%;
-    margin-right: 3%;
     margin-top: auto;
     margin-bottom: auto;
-    width: 85%;
+    width: 18%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .sLogo {
     transition: transform 250ms;
-    height: inherit;
-    width: inherit;
+    width: 100%;
 }
 
 .sLogo:hover {
     transform: translateY(-20px);
+}
+
+/* Disappear */
+.javaLinkRow1 {
+    display: none;
+}
+
+.logosContainer {
+    margin-top: 5%;
 }
 
 @media only screen and (min-width: 765px) {
@@ -109,5 +117,41 @@
 
     .sLogo:hover {
         transform: translateY(-20px);
+    }
+
+    .logos {
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-evenly;
+        width: 90%;
+
+        flex-wrap: nowrap;
+    }
+
+    .sLogoLink {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 85%;
+    }
+
+    .sLogo {
+        height: inherit;
+        width: inherit;
+    }
+
+    .javaLinkRow1 {
+        display: block;
+    }
+    
+    .logosContainer {
+        margin-top: 0;
+    }
+
+    .javaLinkRow2 {
+        display: none;
     }
 }
