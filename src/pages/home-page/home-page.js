@@ -56,7 +56,7 @@ class HomePage extends Component {
           <Post post={post} />
           {/* If Last post in the list, display double skill carousel */}
           {index === this.state.posts.length - 1 &&
-          <div>
+          <div className="logosContainer">
             {/* Carousel Row 1 */}
             <div className='logos'>
               <a className='sLogoLink' 
@@ -83,7 +83,7 @@ class HomePage extends Component {
               href="https://www.mongodb.com/home" target="_blank" rel="noreferrer noopener">
                 <img className='sLogo' src={mongodbLogo} alt="mongodbLogo" />
               </a>
-              <a className='sLogoLink' 
+              <a className='sLogoLink javaLinkRow1' 
               href="https://docs.oracle.com/en/java/" target="_blank" rel="noreferrer noopener">
                 <img className='sLogo' src={javaLogo} alt="javaLogo" />
               </a>
@@ -117,6 +117,10 @@ class HomePage extends Component {
               <a className='sLogoLink' 
                 href="https://www.jenkins.io/" target="_blank" rel="noreferrer noopener">
                 <img className='sLogo' src={jenkinsLogo} alt="jenkinsLogo" />
+              </a>
+              <a className='sLogoLink javaLinkRow2' 
+              href="https://docs.oracle.com/en/java/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={javaLogo} alt="javaLogo" />
               </a>
             </div>
           </div>}

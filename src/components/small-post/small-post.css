@@ -1,9 +1,12 @@
 .SmallPost {
-    width: 25%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .spHeader {
     text-align: center;
+    font-size: 14px !important;
 }
 
 .sCard {
@@ -11,4 +14,35 @@
     background-color: rgba(4, 12, 33, .1) !important;
     text-align: center;
     border-radius: 15px !important;
+}
+
+p {
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 765px) {
+    
+    .spHeader {
+        font-size: 20px !important;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .SmallPost {
+        width: 25%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .spHeader {
+        font-size: 26px !important;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
