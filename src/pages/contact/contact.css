@@ -11,6 +11,7 @@
 
 .cForm {
     margin-top: 60%;
+    margin-bottom: 60%;
     display: flex;
     justify-content: center
 }
@@ -27,6 +28,7 @@
     
     .cForm {
         margin-top: 50%;
+        margin-bottom: 50%;
     }
 }
 
@@ -42,5 +44,6 @@
     
     .cForm {
         margin-top: 20%;
+        margin-bottom: 20%;
     }
 }
