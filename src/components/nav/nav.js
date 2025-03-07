@@ -6,17 +6,33 @@ import './nav.css';
 import { useLocation } from 'react-router-dom'
 import { tabMap } from '../../models/enums/tabmap.enum';
 
+/**
+ *  Nav Bar Component.
+ * @param {Object} props 
+ * @returns {Template}
+ */
 function Nav(props) {
-  // State
-  const [navTitleText ] = useState('josh_rumsey_sde');
-  const location = useLocation()
+  
+  /**
+   * Navigation Bar Title Text.
+   */
+  const [ navTitleText ] = useState('josh_rumsey_sde');
 
-  // Set Nav on init
+  /**
+   * Active location within the web application.
+   */
+  const location = useLocation();
+
+  /**
+   * Sets the default value of the Navigation on init.
+   */
   useEffect(() => {
     props.handleNavChange(null, tabMap[location.pathname])
   }, []);
 
-  // Reset Nav
+  /**
+   * Reset navigation.
+   */
   const resetNav = () => {
     props.handleNavChange(null, 0)
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
