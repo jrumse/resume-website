@@ -41,7 +41,7 @@
 
 .sLogo {
     transition: transform 250ms;
-    width: 10em;
+    width: 5em;
 }
 
 .sLogo:hover {
@@ -71,6 +71,11 @@
 
     .post {
         margin-top: 50%;
+    }
+
+    /* Logos */
+    .sLogo {
+        width: 7.5em;
     }
 }
 
