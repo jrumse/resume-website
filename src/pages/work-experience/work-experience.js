@@ -18,7 +18,7 @@ const sxStyle = {
 /**
  * Experience Object Init.
  */
-const expInit = {"maxar": [], "pnc": []};
+const expInit = {"arka": [], "pnc": []};
 
 /**
  * Component for displaying content relevant to work experience.
@@ -29,7 +29,7 @@ class WorkExperience extends Component {
     super(props);
     this.state = {
       posts: structuredClone(expInit),
-      activeTab: "maxar",
+      activeTab: "arka",
     }
     // Add function binding here
     this.handleTabChange = this.handleTabChange.bind(this);
@@ -42,7 +42,6 @@ class WorkExperience extends Component {
     fetch(process.env.REACT_APP_SERVER + process.env.REACT_APP_ROOT + endpoints.postWorkContent)
       .then(result => result.json())
       .then((result) => {
-        console.log(result);
         // Get the posts object from state
         let posts = structuredClone(expInit);
 
@@ -88,7 +87,7 @@ class WorkExperience extends Component {
         </div>
         <AnimationOnScroll animateIn="animate__fadeIn" duration="2" className="experienceSelector">
           <Tabs value={this.state.activeTab} sx={sxStyle} onChange={this.handleTabChange} className="expTabs" fullWidth={true}>
-            <Tab label="Maxar" className="tab" value="maxar" selected={true} />
+            <Tab label="ARKA" className="tab" value="arka" selected={true} />
             <Tab label="PNC" className="tab" value="pnc" />
           </Tabs>
         </AnimationOnScroll>
