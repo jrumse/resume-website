@@ -16,6 +16,38 @@
     margin-top: 60%;
 }
 
+
+.experienceSelector {
+    margin-top: 60%;
+    padding-bottom: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.expTabs {
+    background-color: rgba(4, 12, 33, .12) !important;
+    border-radius: 10rem !important;
+}
+
+.tab {
+    /* Dimensions */
+    width: 10em !important;
+    height: 4em !important;
+    border-radius: 10rem !important;
+
+    /* Font */
+    font-size: 18px !important;
+    color: white !important;
+
+    /* Unset All Caps Tabs */
+    text-transform: unset !important;
+}
+
+.tab:hover {
+    background-color: rgba(4, 12, 33, .1) !important;
+}
+
+
 @media only screen and (min-width: 765px) {
     .work-experience {
         margin-top: 48%;
@@ -29,6 +61,20 @@
 
     .workPosts {
         margin-top: 50%;
+    }
+
+    .experienceSelector {
+        margin-top: 40%;
+        padding-bottom: 40%;
+    }
+
+    .tab {
+        /* Dimensions */
+        width: 12em !important;
+        height: 4em !important;
+
+        /* Font */
+        font-size: 21px !important;
     }
 }
 
@@ -45,6 +91,20 @@
         margin-left: auto;
         margin-right: auto;
         padding-bottom: 10%;
+    }
+
+    .experienceSelector {
+        margin-top: 20%;
+        padding-bottom: 20%;
+    }
+
+    .tab {
+        /* Dimensions */
+        width: 30em !important;
+        height: 5em !important;
+
+        /* Font */
+        font-size: 24px !important;
     }
     
     .workPosts {
