@@ -8,12 +8,12 @@ import goLogo from '../../assets/images/goLogo.png'
 import pyLogo from '../../assets/images/pyLogo.png'
 import javaLogo from '../../assets/images/javaLogo.png'
 import mongodbLogo from '../../assets/images/mongodbLogo.png'
-import jsLogo from '../../assets/images/jsLogo.png'
+import solidjsLogo from '../../assets/images/solidjslogo.svg'
 import tsLogo from '../../assets/images/tsLogo.png'
 import cLogo from '../../assets/images/cLogo.png'
-import sqlLogo from '../../assets/images/sqlLogo.png'
+import postgresLogo from '../../assets/images/postgreslogo.png'
 import expressLogo from '../../assets/images/expressJsLogo.png'
-import flaskLogo from '../../assets/images/flaskLogo.png'
+import dockerLogo from '../../assets/images/dockerlogo.png'
 import jenkinsLogo from '../../assets/images/jenkinsLogo.png'
 import './home-page.css';
 import { TypeAnimation } from 'react-type-animation';
@@ -91,28 +91,28 @@ class HomePage extends Component {
             {/* Carousel Row 2 */}
             <div className='logos'>
               <a className='sLogoLink' 
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer noopener">
-                <img className='sLogo' src={jsLogo} alt="jsLogo" />
-              </a>
-              <a className='sLogoLink' 
-                href="https://expressjs.com/" target="_blank" rel="noreferrer noopener">
-                <img className='sLogo' src={expressLogo} alt="expressLogo" />
+                href="https://www.solidjs.com/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={solidjsLogo} alt="solidjsLogo" />
               </a>
               <a className='sLogoLink' 
               href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer noopener">
                 <img className='sLogo' src={tsLogo} alt="tsLogo" />
               </a>
               <a className='sLogoLink' 
-              href="https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16" target="_blank" rel="noreferrer noopener">
-                <img className='sLogo' src={sqlLogo} alt="sqlLogo" />
+                href="https://expressjs.com/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={expressLogo} alt="expressLogo" />
+              </a>
+              <a className='sLogoLink' 
+              href="https://www.postgresql.org/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={postgresLogo} alt="postgresLogo" />
               </a>
               <a className='sLogoLink' 
                 href="https://learn.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer noopener">
                 <img className='sLogo' src={cLogo} alt="cLogo" />
               </a>
               <a className='sLogoLink' 
-              href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank" rel="noreferrer noopener">
-                <img className='sLogo' src={flaskLogo} alt="flaskLogo" />
+              href="https://www.docker.com/" target="_blank" rel="noreferrer noopener">
+                <img className='sLogo' src={dockerLogo} alt="dockerLogo" />
               </a>
               <a className='sLogoLink' 
                 href="https://www.jenkins.io/" target="_blank" rel="noreferrer noopener">
