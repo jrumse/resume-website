@@ -41,7 +41,7 @@
 
 .sLogo {
     transition: transform 250ms;
-    width: 5em;
+    width: 2.5em;
 }
 
 .sLogo:hover {
